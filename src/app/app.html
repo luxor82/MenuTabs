@@ -1,4 +1,4 @@
-<ion-menu [content]="mainContent">
+<ion-menu side="right" [content]="mainContent">
   <ion-header>
     <ion-toolbar>
       <ion-title>
@@ -9,14 +9,14 @@
   <ion-content id="side-menu21">
     <ion-list id="menu-list1">
       <ion-item color="none" menuClose="" on-click="goToLogin()" id="menu-list-item1">
-        <ion-icon name="android" item-left></ion-icon>
+        <ion-icon name="person" item-left></ion-icon>
         Login
       </ion-item>
       <ion-item-sliding>
-        <ion-item color="balanced" href-inappbrowser="http://www.linkedin.com" id="menu-list-item2">
-          <ion-icon name="linkedin" item-left></ion-icon>
+        <a ion-item color="balanced" href="http://www.linkedin.com" id="menu-list-item2">
+          <ion-icon name="people" item-left></ion-icon>
           Item
-        </ion-item>
+        </a>
         <ion-item-options side="left">
           <button ion-button color="stable">
             Swipe

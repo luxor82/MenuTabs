@@ -7,6 +7,7 @@ import { CartTabDefaultPagePage } from '../pages/cart-tab-default-page/cart-tab-
 import { CloudTabDefaultPagePage } from '../pages/cloud-tab-default-page/cloud-tab-default-page';
 import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
 import { LoginPage } from '../pages/login/login';
+import { HomePage } from '../pages/home/home';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -19,7 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CartTabDefaultPagePage,
     CloudTabDefaultPagePage,
     TabsControllerPage,
-    LoginPage
+    LoginPage,
+    HomePage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CartTabDefaultPagePage,
     CloudTabDefaultPagePage,
     TabsControllerPage,
-    LoginPage
+    LoginPage,
+    HomePage
   ],
   providers: [
     StatusBar,

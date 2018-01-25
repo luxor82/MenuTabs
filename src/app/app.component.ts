@@ -7,7 +7,7 @@ import { LoginPage } from '../pages/login/login';
 
 
 import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
-
+import { HomePage } from '../pages/home/home';
 
 
 @Component({
@@ -27,6 +27,6 @@ export class MyApp {
   }
   goToLogin(params){
     if (!params) params = {};
-    this.navCtrl.setRoot(LoginPage);
+    this.navCtrl.push(LoginPage);
   }
 }
