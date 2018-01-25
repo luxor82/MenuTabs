@@ -1,6 +1,6 @@
 {
   "name": "MenuTabs",
-  "app_id": "",
+  "app_id": "42f12ec3",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
