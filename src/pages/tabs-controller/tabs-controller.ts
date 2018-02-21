@@ -5,17 +5,20 @@ import { CartTabDefaultPagePage } from '../cart-tab-default-page/cart-tab-defaul
 import { CloudTabDefaultPagePage } from '../cloud-tab-default-page/cloud-tab-default-page';
 import {LoginPage} from '../login/login';
 
+
 @Component({
   selector: 'page-tabs-controller',
   templateUrl: 'tabs-controller.html'
-})
+  })
 export class TabsControllerPage {
 
   tab1Root: any = CameraTabDefaultPagePage;
   tab2Root: any = CartTabDefaultPagePage;
   tab3Root: any = CloudTabDefaultPagePage;
   tab4Root: any = LoginPage;
+
   constructor(public navCtrl: NavController) {
+    
   }
   
 }

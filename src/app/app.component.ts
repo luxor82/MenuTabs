@@ -28,4 +28,5 @@ export class MyApp {
     if (!params) params = {};
     this.navCtrl.push(LoginPage);
   }
+  
 }
