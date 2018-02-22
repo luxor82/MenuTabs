@@ -26,21 +26,29 @@ var LoginPage = (function () {
         this.http = http;
     }
     LoginPage.prototype.test = function () {
-        this.http.get('http://localhost:8080/HelloStruts/Ionic', {}, {})
+        var _this = this;
+        this.promise = this.http.get('http://localhost:8080/HelloStruts/Ionic', {}, {})
             .then(function (data) {
+            var testo = "OK " + data + " ";
+            console.log("OK");
             console.log(data.status);
             console.log(data.data); // data received by server
             console.log(data.headers);
+            var input = document.getElementById("log");
+            input.textContent = testo + " " + _this.promise;
         })
             .catch(function (error) {
+            var testo = "KO " + error;
+            console.log("Error");
             console.log(error.status);
-            console.log(error.error); // error message as string
-            console.log(error.headers);
+            console.log(error); // error message as string
+            var input = document.getElementById("log");
+            input.textContent = testo + " " + _this.promise;
         });
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\lucio.merre\IonicProjects\MenuTabs\src\pages\login\login.html"*/'<ion-header>\n  <ion-navbar>    \n    <ion-buttons end>\n        <button ion-button end menuToggle="right">\n            <ion-icon name="menu"></ion-icon>\n          </button>\n  </ion-buttons>\n\n    <ion-title>\n      Login\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page5">\n  <form id="login-form1">\n    <ion-list id="login-list2">\n      <ion-item id="login-input1">\n        <ion-label>\n          Email\n        </ion-label>\n        <ion-input type="email" placeholder=""></ion-input>\n      </ion-item>\n      <ion-item id="login-input2">\n        <ion-label>\n          Password\n        </ion-label>\n        <ion-input type="password" placeholder=""></ion-input>\n      </ion-item>\n    </ion-list>\n    <div class="spacer" style="height:40px;" id="login-spacer1"></div>\n    <button id="login-button1" ion-button color="stable" on-click="test()" block>\n      Log in\n    </button>\n    <button id="login-button2" ion-button clear color="positive" block href-inappbrowser="/signup">\n      Or create an account\n    </button>\n  </form>\n</ion-content>'/*ion-inline-end:"C:\Users\lucio.merre\IonicProjects\MenuTabs\src\pages\login\login.html"*/
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\lucio.merre\IonicProjects\MenuTabs\src\pages\login\login.html"*/'<ion-header>\n  <ion-navbar>    \n    <ion-buttons end>\n        <button ion-button end menuToggle="right">\n            <ion-icon name="menu"></ion-icon>\n          </button>\n  </ion-buttons>\n\n    <ion-title>\n      Login\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page5">\n  <form id="login-form1">\n    <ion-list id="login-list2">\n      <ion-item id="login-input1">\n        <ion-label>\n          Email\n        </ion-label>\n        <ion-input type="email" placeholder=""></ion-input>\n      </ion-item>\n      <ion-item id="login-input2">\n        <ion-label>\n          Password\n        </ion-label>\n        <ion-input type="password" placeholder=""></ion-input>\n      </ion-item>\n    </ion-list>\n    <div class="spacer" style="height:40px;" id="login-spacer1"></div>\n    <button id="login-button1" ion-button color="stable" on-click="test()" block>\n      Log in\n    </button>\n    <button id="login-button2" ion-button clear color="positive" block href-inappbrowser="/signup">\n      Or create an account\n    </button>\n  </form>\n\n  <ion-item id="log">\n    <ion-label>\n      LOG\n    </ion-label>\n    <ion-input type="text" placeholder=""></ion-input>\n  </ion-item>\n</ion-content>'/*ion-inline-end:"C:\Users\lucio.merre\IonicProjects\MenuTabs\src\pages\login\login.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_http__["a" /* HTTP */]])
     ], LoginPage);
